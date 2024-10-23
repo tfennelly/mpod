@@ -1,0 +1,14 @@
+= CLI documentation
+
+== Container Lifecycle
+
+=== Getting container information
+You can check all running containers on your local machine by running the `mpod ps` command.
+
+=== Starting containers
+
+==== `mpod start <container-name>`
+You can start up a simple container with the `mpod start <container-name>` command.
+
+=== Stopping containers
+You can stop a container with the `mpod stop <container-id>` command.

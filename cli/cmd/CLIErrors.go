@@ -9,6 +9,7 @@ type CLIErr struct {
 	message string
 }
 
+// An example of an argument is 'mpod start', where start is the argument
 func InvalidArg(command string, invalidArg string) CLIErr {
 	var messageSB strings.Builder
 	messageSB.WriteString("InvalidArgumentError: ")
@@ -24,6 +25,8 @@ func InvalidArg(command string, invalidArg string) CLIErr {
 	return InvalidArgumentError
 }
 
+// A flag can be thought of as 'an argument to an argument'
+// e.g 'mpod start --name "my-container"' where '--name' is the flag
 func InvalidFlag(argument string, invalidFlag string) CLIErr {
 	var messageSB strings.Builder
 	messageSB.WriteString("InvalidFlagError: ")

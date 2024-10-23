@@ -23,7 +23,7 @@ func InvalidFlag(argument string, invalidFlag string) CLIErr {
 
 func newCLIErr(errorType string, argument string, invalidFlag string) CLIErr {
 	invalidFlagError := CLIErr{
-		name:    "InvalidFlagError",
+		name:    errorType,
 		message: fmt.Sprintf("%s: '%s' is not a valid flag for argument: %s", errorType, argument, invalidFlag),
 	}
 
